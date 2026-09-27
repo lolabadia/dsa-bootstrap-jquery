@@ -22,6 +22,17 @@ $(document).ready(function () {
                 $("#repositories").append(row);
             });
 
+        }).fail(function () {
+
+            $("#repositories").empty();
+
+            let row =
+                "<tr>" +
+                "<td colspan='3'>User not found</td>" +
+                "</tr>";
+
+            $("#repositories").append(row);
+
         });
 
     });
